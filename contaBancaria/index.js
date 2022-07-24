@@ -33,12 +33,17 @@ function inicializador(){
 
 function depositarDinheiro(id_cliente, valor){
 
+  //poderia ser float com o .toFixed(2);
+  clientList.filter(value => value.id === parseInt(id_cliente)).forEach(clientList => clientList.saldo = parseInt(clientList.saldo) + parseInt(valor))
+  console.log(clientList)
+
 }
 
-function sacarDinheiro(id_cliente, valor_saque){
+function sacarDinheiro(id_cliente, valor){
 
-  clientList.filter(value => value.id === parseInt(id_cliente)).forEach(clientList => clientList.saldo = clientList.saldo - valor_saque)
-  
+  clientList.filter(value => value.id === parseInt(id_cliente)).forEach(clientList => clientList.saldo = clientList.saldo - valor)
+  console.log(clientList)
+
 }
 
 function btnConfirmar(){
