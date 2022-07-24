@@ -4,5 +4,6 @@ body{
 
 .inputs{
     display: inline-block;
-    width: 400px;
+    width: 350px;
+    margin: 5px;
 }
